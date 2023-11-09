@@ -1,0 +1,13 @@
+{
+	"name": "Ubuntu Angular",
+	"dockerComposeFile": "./docker.compose.yml",
+	"service": "vscode-container",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+
+	"customizations": {
+		"vscode": {
+			"extensions": ["Orta.vscode-jest", "GitHub.vscode-pull-request-github", "pflannery.vscode-versionlens", "github.vscode-github-actions", "bradlc.vscode-tailwindcss", "trivadis.ngtvd-extensions", "GitHub.copilot", "GitHub.copilot-chat"]
+		}
+	}
+}
