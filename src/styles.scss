@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+}
+
+.input-label {
+    @apply block mb-2 text-sm font-semibold text-gray-800 mt-4;
+}
+
+.input-label + div {
+    @apply -mt-2;
+}
+
+input, textarea, select {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
+}
+
+.icon-input {
+    @apply relative mb-4;
+
+    div {
+        @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none h-8 w-8 pt-2;
+
+        svg {
+            @apply w-5 h-5 mt-2 text-gray-500;
+        }
+    }
+
+    input, select {
+        @apply bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5;
+    }
+}
+
+.input-hint {
+    @apply text-sm text-gray-400 mt-1 pl-1;
+}
+
+.btn-wide {
+    @apply text-white w-full bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:ring-primary-300 disabled:bg-slate-300 disabled:cursor-not-allowed font-medium rounded-lg text-base px-5 py-3.5 mr-2 mt-4 focus:outline-none transition-all;
+   
+}
+
+.btn-primary {
+    @apply text-white bg-primary-base hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 cursor-pointer;
+   
+}
+
+.btn-secondary {
+    @apply text-primary-500 hover:bg-primary-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 cursor-pointer transition-colors;
+}
+
+.shift-card {
+    @apply text-sm border-2 rounded-xl bg-slate-50 p-4;
+}
+
+.shift-header {
+    @apply text-4xl font-bold mb-4;
+}
+
+.shift-list-item {
+    @apply rounded-xl border-2 border-dotted p-4 mt-3 cursor-pointer font-medium hover:bg-slate-100 active:bg-slate-200 transition-all;
+    span {
+        @apply text-slate-400 text-sm;
+    }
+}
+
+.shift-list-item-active {
+    @apply rounded-xl border-2 border-solid border-primary-400 accent-primary-400 p-4 mt-3 cursor-pointer font-medium hover:bg-slate-100 active:bg-slate-200 transition-all;
+    span {
+        @apply text-primary-400 text-sm;
+    }
+}
+
+.shift-info-card {
+    @apply rounded-xl border-2 border-dotted px-4 py-3;
+}
+
+.shift-content {
+    @apply m-8 lg:px-40 xl:px-72;
+}
+
+body > div:last-child > span + img {
+    display: inline !important;
+}
+
+.shift-chip {
+    @apply inline-flex mt-2 items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800 mr-2 cursor-pointer;
+}
+
+.shift-chip-active {
+    @apply inline-flex mt-2 items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-primary-100 text-primary-600 mr-2;
+}

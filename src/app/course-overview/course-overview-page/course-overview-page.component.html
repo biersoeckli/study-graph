@@ -1,0 +1,7 @@
+<div class="shift-content">
+    <div class="text-2xl font-semibold">Deine Kurse</div>
+    <div *ngFor="let folder of studyGraphFolders" class="shift-list-item">
+        {{folder.name}}<br>
+        <span>{{folder.userDisplayName}}</span>
+    </div>
+</div>
